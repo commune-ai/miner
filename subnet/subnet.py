@@ -46,7 +46,7 @@ class Subnets(c.Module):
     def networks(self):
         return list(self.state.keys())
     
-    def clone_subnet(self, subnet, network):
+    def clone_subnet(self, subnet, network=None):
 
         try:
             network = self.resolve_network(network)
@@ -65,6 +65,10 @@ class Subnets(c.Module):
         except Exception as e:
             return str(e)
 
+    def rm_subnet(self, subnet, network=None):
+        network = self.resolve_network(network)
+        path = f"{self.subnets_path}/{network}/{subnet}"
+        return c.rm(path)
 
 
     def clone_all(self, network='all'):

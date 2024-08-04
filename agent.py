@@ -3,7 +3,7 @@ import commune as c
 class Agent(c.Module):
 
     def __init__(self, name='agent', 
-                    network='all', 
+                    network='commune', 
                     network_module='subnet', 
                     link_fns=None, 
                     tools=['module.cmd', 'module.find_object_paths']):
