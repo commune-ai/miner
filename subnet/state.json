@@ -1,0 +1,61 @@
+{
+    "bittensor": {
+        "shortcuts": ["bt", "b"],
+        "links": [
+            "https://github.com/opentensor/prompting",
+            "https://github.com/inference-labs-inc/omron-subnet",
+            "https://github.com/myshell-ai/MyShell-TTS-Subnet",
+            "https://github.com/manifold-inc/targon",
+            "https://github.com/OpenKaito/openkaito",
+            "https://github.com/amedeo-gigaver/infinite_games",
+            "https://github.com/eclipsevortex/SubVortex/",
+            "https://github.com/taoshidev/proprietary-trading-network",
+            "https://github.com/unconst/pretrain-subnet",
+            "https://github.com/Sturdy-Subnet/sturdy-subnet",
+            "https://github.com/impel-intelligence/dippy-bittensor-subnet",
+            "https://github.com/backend-developers-ltd/ComputeHorde",
+            "https://github.com/macrocosm-os/data-universe",
+            "https://github.com/synapsec-ai/llm-defender-subnet",
+            "https://github.com/blockchain-insights/blockchain-data-subnet",
+            "https://github.com/eseckft/BitAds.ai",
+            "https://github.com/404-Repo/three-gen-subnet",
+            "https://github.com/corcel-api/cortex.t",
+            "https://github.com/namoray/vision",
+            "https://github.com/RogueTensor/bitagent_subnet",
+            "https://github.com/omegalabsinc/omegalabs-anytoany-bittensor",
+            "https://github.com/Datura-ai/smart-scrape",
+            "https://github.com/SocialTensor/SocialTensorSubnet",
+            "https://github.com/omegalabsinc/omegalabs-bittensor-subnet/",
+            "https://github.com/macrocosm-os/folding/",
+            "https://github.com/TensorAlchemy/TensorAlchemy/",
+            "https://github.com/neuralinternet/compute-subnet/",
+            "https://github.com/foundryservices/snpOracle/",
+            "https://github.com/fractal-net/fractal/",
+            "https://github.com/Bettensor/bettensor/",
+            "https://github.com/nimaaghli/NASChain/",
+            "https://github.com/It-s-AI/llm-detection/",
+            "https://github.com/afterpartyai/bittensor-conversation-genome-project/",
+            "https://github.com/Healthi-Labs/healthi-subnet/",
+            "https://github.com/LogicNet-Subnet/LogicNet-prod/",
+            "https://github.com/HIP-Labs/HIP-Subnet/",
+            "https://github.com/macrocosm-os/finetuning/"
+        ]
+    },
+
+    "commune":{
+        "shortcuts": ["c", "com"],
+        "links": [ 
+            "https://github.com/nakamoto-ai/zangief", 
+            "https://github.com/agicommies/synthia/", 
+            "https://github.com/Open0xScope/openscope/", 
+            "https://github.com/kaiwa-dev/kaiwa-subnet/", 
+            "https://github.com/Agent-Artificial/eden-subnet/", 
+            "https://github.com/mosaicx-org/mosaic-subnet/", 
+            "https://github.com/MarketCompassDev/marketcompass-subnet/", 
+            "https://github.com/panthervis/prediction-subnet/", 
+            "https://github.com/Comtensor/comtensor/", 
+            "https://github.com/smart-window/comchat-subnet/", 
+            "https://github.com/bigideainc/CommuneImplementation/"
+        ]
+    }
+}
