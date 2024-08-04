@@ -1,11 +1,3 @@
-# Subnets
-
-This is a simple tool to manage commune and bittensor subnets.
-
-SETUP
-
-[installation](./docs/install.md)
-
 
 ## Usage
 

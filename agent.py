@@ -21,6 +21,9 @@ class Agent(c.Module):
         for fn in link_fns:
             setattr(self, fn, getattr(self.network_module, fn))
 
+    @property
+    def networks(self):
+        return list(self.network_module.state.keys())
 
     def find_objects(self, path='./'):
         return c.find_object_paths(path)
