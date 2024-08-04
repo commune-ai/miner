@@ -10,12 +10,16 @@ c ip
 135.23.99.21
 
 
-now you have an agent in the root directory
+now clone all the subnets by running the following command:
+```bash
 
-c agent/filepath
-~/subnets/agent.py
+c agent/clone_all
+```
+{'msg': 'Cloned 48 subnets.'}
 
 c agent/networks
+
+
 
 
 
