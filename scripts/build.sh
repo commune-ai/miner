@@ -1,1 +1,1 @@
-docker build -t arena .
+docker build -t subnets .
