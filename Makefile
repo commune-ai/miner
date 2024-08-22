@@ -2,7 +2,7 @@
 
 
 
-CONTAINER=arena
+CONTAINER=subnets
 SCRIPTS_PATH=./scripts
 COMMUNE_REPO=https://github.com/commune-ai/commune.git
 git clone ${COMMUNE_REPO} ./src/commune
@@ -23,7 +23,7 @@ kill:
 enter:
 	docker exec -it ${CONTAINER} bash
 tests: 
-	docker exec ${CONTAINER} bash -c "pytest commune/tests"
+	docker exec ${CONTAINER} bash -c "pytest /app/tests"
 chmod_scripts:
 	chmod +x ${SCRIPTS_PATH}/*.sh
 install:

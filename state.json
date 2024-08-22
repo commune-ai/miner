@@ -1,42 +1,16 @@
 {
     "bittensor": [
-            "opentensor/prompting",
-            "inference-labs-inc/omron-subnet",
-            "myshell-ai/MyShell-TTS-Subnet",
-            "manifold-inc/targon",
-            "OpenKaito/openkaito",
-            "amedeo-gigaver/infinite_games",
-            "eclipsevortex/SubVortex/",
-            "taoshidev/proprietary-trading-network",
-            "unconst/pretrain-subnet",
-            "Sturdy-Subnet/sturdy-subnet",
+
             "impel-intelligence/dippy-bittensor-subnet",
             "backend-developers-ltd/ComputeHorde",
             "macrocosm-os/data-universe",
             "synapsec-ai/llm-defender-subnet",
-            "blockchain-insights/blockchain-data-subnet",
-            "eseckft/BitAds.ai",
-            "404-Repo/three-gen-subnet",
-            "corcel-api/cortex.t",
             "namoray/vision",
-            "RogueTensor/bitagent_subnet",
-            "omegalabsinc/omegalabs-anytoany-bittensor",
-            "Datura-ai/smart-scrape",
-            "SocialTensor/SocialTensorSubnet",
-            "omegalabsinc/omegalabs-bittensor-subnet/",
             "macrocosm-os/folding/",
-            "TensorAlchemy/TensorAlchemy/",
-            "neuralinternet/compute-subnet/",
-            "foundryservices/snpOracle/",
-            "fractal-net/fractal/",
-            "Bettensor/bettensor/",
-            "nimaaghli/NASChain/",
             "It-s-AI/llm-detection/",
             "afterpartyai/bittensor-conversation-genome-project/",
-            "Healthi-Labs/healthi-subnet/",
-            "LogicNet-Subnet/LogicNet-prod/",
-            "HIP-Labs/HIP-Subnet/",
-            "macrocosm-os/finetuning/"
+            "macrocosm-os/finetuning/",
+            "opentensor/prompting"
         ], 
     "commune": [ 
             "nakamoto-ai/zangief", 
@@ -50,5 +24,37 @@
             "Comtensor/comtensor/", 
             "smart-window/comchat-subnet/", 
             "bigideainc/CommuneImplementation/"
-        ]
+        ],
+
+    "archive_bt": [  
+
+    "inference-labs-inc/omron-subnet",
+    "myshell-ai/MyShell-TTS-Subnet",
+    "manifold-inc/targon",
+    "OpenKaito/openkaito",
+    "amedeo-gigaver/infinite_games",
+    "eclipsevortex/SubVortex/",
+    "taoshidev/proprietary-trading-network",
+    "unconst/pretrain-subnet",
+    "Sturdy-Subnet/sturdy-subnet",
+    "blockchain-insights/blockchain-data-subnet",
+    "eseckft/BitAds.ai",
+    "404-Repo/three-gen-subnet",
+    "corcel-api/cortex.t",
+    "RogueTensor/bitagent_subnet",
+    "omegalabsinc/omegalabs-anytoany-bittensor",
+    "Datura-ai/smart-scrape",
+    "SocialTensor/SocialTensorSubnet",
+    "omegalabsinc/omegalabs-bittensor-subnet/",
+    "TensorAlchemy/TensorAlchemy/",
+    "neuralinternet/compute-subnet/",
+    "foundryservices/snpOracle/",
+    "fractal-net/fractal/",
+    "Bettensor/bettensor/",
+    "nimaaghli/NASChain/",
+    "Healthi-Labs/healthi-subnet/",
+    "LogicNet-Subnet/LogicNet-prod/",
+    "HIP-Labs/HIP-Subnet"
+]
 }
+

@@ -1,7 +1,36 @@
 import commune as c
+state = {
+        "bittensor": [
+
+                "impel-intelligence/dippy-bittensor-subnet",
+                "backend-developers-ltd/ComputeHorde",
+                "macrocosm-os/data-universe",
+                "namoray/vision",
+                "macrocosm-os/folding/",
+                "It-s-AI/llm-detection/",
+                "afterpartyai/bittensor-conversation-genome-project/",
+                "macrocosm-os/finetuning/",
+            ], 
+        "commune": [ 
+                "nakamoto-ai/zangief", 
+                "agicommies/synthia", 
+                "Open0xScope/openscope", 
+                "kaiwa-dev/kaiwa-subnet", 
+                "Agent-Artificial/eden-subnet", 
+                "mosaicx-org/mosaic-subnet/", 
+                "MarketCompassDev/marketcompass-subnet/", 
+                "panthervis/prediction-subnet/", 
+                "Comtensor/comtensor/", 
+                "smart-window/comchat-subnet/", 
+                "bigideainc/CommuneImplementation/"
+            ]
+    }
+
+
+
 
 class Subnets(c.Module):
-
+    state = state
     repo_path = '/'.join(__file__.split('/')[:-1])
     subnets_path = f"{repo_path}/subnets"
     state_path = f"{repo_path}/state.json"
@@ -10,11 +39,9 @@ class Subnets(c.Module):
 
     def set_network(self, network):
         self.network = network
-        self.state =  c.get_json(self.state_path)
         return {
         'msg': f"Set network to {network}", 
         'network': network, 
-        'state_path': self.state_path
         }
 
     def resolve_network(self, network):
@@ -31,9 +58,8 @@ class Subnets(c.Module):
                         break
         return network
 
-
-    def networks(self):
-        return list(self.state.keys())
+    def networks(self, forget_preffixes=['archive', '__']):
+        return [k for k in  self.state.keys() if not any([k.startswith(p) for p in forget_preffixes])]
     
     def resolve_url(self, url):
         prefix = "https://github.com/"
@@ -57,6 +83,15 @@ class Subnets(c.Module):
             return glob(f"{self.subnets_path}/*/*")
         else:
             return glob(f"{self.subnets_path}/{network}/*")
+        
+
+    def name2path(self, network=None):
+        network = self.resolve_network(network)
+        name2path = {}
+        for path in self.paths(network):
+            name = path.split('/')[-1]
+            name2path[name] = path
+        return name2path
         
     
     def clone_subnet(self, subnet, network):
@@ -129,7 +164,7 @@ class Subnets(c.Module):
     
     def get_url_name(self, link):  
         if link.endswith('/'):
-            return link.split('/')[-2]
+            link = link[:-1]
         return link.split('/')[-1].split('.git')[0]
     
     
@@ -183,14 +218,25 @@ class Subnets(c.Module):
     def is_path_subnet(self, path):
         return self.isdir(path) and not path.startswith('__')
 
-    def subnet2files(self):
-        subnet2path = {}
-        for p in self.ls(self.subnets_path):
-            if self.is_path_subnet(p):
-                name = p.split('/')[-1]
-                subnet2path[name] = c.glob(p)
-        
-        return subnet2path
+    def name2files(self):
+        name2files = {}
+        name2path = self.name2path()
+        for name, path in name2path.items():
+            for p in self.ls(path):
+                name2files[name] = self.ls(path)
+        return name2files
+    
+    def name2readme(self):
+        name2readme = {}
+        name2files = self.name2files()
+        for name, files in name2files.items():
+            for file in files:
+                if 'readme' in file.lower():
+                    readme = c.get_text(file)
+                    name2readme[name] = readme
+                    break
+        return name2readme
+                    
                 
     def subnet2readme(self):
         subnet2readme = {}
@@ -245,6 +291,3 @@ class Subnets(c.Module):
             c.rm(repo)
             print(f"Removed {repo}")
         return repos
-
-    
-
