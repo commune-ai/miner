@@ -7,10 +7,10 @@
 IMAGE_NAME=subnets
 IMAGE_PATH=./
 CONTAINER_NAME=$IMAGE_NAME
-SHM_SIZE=4g
-# RESOLVE PORT RANGE
+SHM_SIZE=8g
 START_PORT=50050
 END_PORT=50100
+
 # if the image doesnt exist, build it
 if [ "$1" == "--build" ] || [ "$1" == "-b" ]; then
   BUILD=true
@@ -22,14 +22,10 @@ if [ "$BUILD" == true ]; then
   docker build -t $IMAGE_NAME $IMAGE_PATH
 fi
 
-
-
-
 CONTAINER_EXISTS=$(docker ps -q -f name=$CONTAINER_NAME)  
 if [ $CONTAINER_EXISTS ]; then
   echo "STOPPING CONTAINER $CONTAINER_NAME"
   docker stop $CONTAINER_NAME
-
 fi
 
 CONTAINER_ID=$(docker ps -aqf "name=$CONTAINER_NAME")
@@ -42,8 +38,8 @@ CMD_STR="docker run -d \
   --name $CONTAINER_NAME \
   --shm-size $SHM_SIZE \
   -v ~/.commune:/root/.commune \
+  -v ~/.bittensor:/root/.bittensor \
   -v $PWD:/app \
-  -v ~/commune:/app/commune \
   --network host \
   --restart unless-stopped \
   $CONTAINER_NAME"
